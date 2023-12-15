@@ -25,6 +25,15 @@ Created on Thu Dec 14 11:17:06 2023
 # familya = ' ibn Abdulloh'
 # print(f"Payg'ambarimizning ismlari {ism}, shariflari {familya}" )
 
+ism = 'Ahad'
+familiya = 'Qayum'
+print(ism + ' ' + familiya) # ikki o'zgaruvchi orasiga bo'sh joy qo'shamiz
+
+ism = "Ahad"
+familiya = 'Qayum'
+ism_sharif = f"{ism} {familiya}"
+print(ism_sharif)
+
 # Maxsus belgilar
 
 # print('Hello world')
@@ -52,4 +61,17 @@ ism = input("Ismingiz nima? \n>>>")
 print("Assalomu alaykum "+ ism.title())
 
 
+# AMALIYOT
+# Quyidagi mashqlarni bajaring:
 
+# Quyidagi o'zgaruvchilarni yarating:
+# kocha="Bog'bon"
+# mahalla="Sog'bon"
+# tuman="Bodomzor"
+# viloyat="Samarqand"
+# Yuqoridagi o'zgaruvchilarni jamlab, quyidagi ko'rinishda konsolga chiqaring:
+# Bog'bon ko'chasi, Sog'bon mahallasi, Bodomzor tumani, Samarqand viloyati
+# Yuqoridagi o'zgaruvchilarning (kocha, mahalla, tuman, viloyat) qiymatini foydalanuvchidan so'rang. Va avvalgi mashqni takrorlang.
+# Yuqoridagi matnni konsolga chiqarishda har bir verguldan keyin yangi qatordan yozing
+# Yuqoridagi matnni f-string yordamida, yangi, manzil deb nomlangan o'zgaruvchiga yuklang
+# manzilga biz yuqorida o'rgangan title(), upper(), lower() , capitalize() metodlarini qo'llab ko'ring.
