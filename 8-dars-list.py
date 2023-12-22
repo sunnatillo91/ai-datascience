@@ -93,11 +93,52 @@ cars.sort()  #ro'yxatni alifbo tartibi bo'yicha tartiblash
 # Agar Tuple ga o'zgartirish talab qilinsa, yagona yo'li o'zgarmas ro'yxatni list() funktsiyasi yordamida List (oddiy ro'yxat) 
 # ko'rinishiga keltirib olish, o'zgarishlarni bajarsih va qaytarib tuple() funktsiyasi yordamida o'zgarmas ro'yxatga o'tkazish mumkin:
 
-toys = ('bus','car','bear','dino','snake','lizard') # o'zgarmas ro'yxat
-toys = list(toys) # o'zgarmas ro'yxatni oddiy ro'yxatga (List) aylantiramiz
-# Ro'yxatga o'zgartirishlar kiritamiz
-toys.append('dragon')
-toys.remove('bus')
-toys[1] = 'mcqueen'
-toys = tuple(toys) # Ro'yxatni qaytadan o'zgarmas ro'yxatga (Tuple) aylantiramiz
-print(toys)
+# toys = ('bus','car','bear','dino','snake','lizard') # o'zgarmas ro'yxat
+# toys = list(toys) # o'zgarmas ro'yxatni oddiy ro'yxatga (List) aylantiramiz
+# # Ro'yxatga o'zgartirishlar kiritamiz
+# toys.append('dragon')
+# toys.remove('bus')
+# toys[1] = 'mcqueen'
+# toys = tuple(toys) # Ro'yxatni qaytadan o'zgarmas ro'yxatga (Tuple) aylantiramiz
+# print(toys)
+
+# AMALIYOT
+# O'zingizga ma'lum davlatlarning ro'yxatini tuzing va ro'yxatni konsolga chiqaring
+davlatlar = ["O'zbekiston", "Turkiya", "Qozog'iston", "Ozarbayjon"]
+print(davlatlar)
+# Ro'yxatning uzunligini konsolga chiqaring
+print(len(davlatlar))
+# sorted() funktsiyasi yordamida ro'yxatni tartiblangan holda konsolga chiqaring
+# print(sorted(davlatlar))
+# sorted() yordamida ro'yxatni teskari tartibda konsolga chiqaring
+# print(sorted(davlatlar, reverse=True))
+# Asl ro'yxatni qaytadan konsolga chiqaring
+# print(davlatlar)
+# reverse() metodi yordamida ro'yxatni ortidan boshlab chiqaring
+davlatlar.reverse()
+print(davlatlar)
+# sort() metodi yordamida ro'yxatni avval alifbo bo'yicha, keyin esa alifboga teskari tartibda konsolga chiqaring.
+davlatlar.sort()
+print(davlatlar)
+davlatlar.sort(reverse=True)
+print(davlatlar)
+# 120 dan 1200 gacha bo'lgan juft sonlar ro'yxatini tuzing
+juft_sonlar = list(range(120,1200, 2))
+# print(juft_sonlar)
+
+# Ro'yxatdagi sonlar yig'indisini hisoblang va konsolga chiqaring
+sum(juft_sonlar)
+# Ro'yxatdagi eng katta va eng kichik son o'rtasidagi ayirmani hisoblang va konsolga chiqaring
+eng_kichik = min(juft_sonlar)
+eng_katta = max(juft_sonlar)
+print("Ro'yxatdagi eng katta va eng kichik son o'rtasidagi ayirma =", eng_katta-eng_kichik, "ga teng")
+# Ro'yxatdagi elementlar sonini hisoblang
+print(len(juft_sonlar))
+# Ro'yxatning boshidan, o'rtasidan va oxiridan 20 ta qiymatni konsolga chiqaring
+# print(juft_sonlar[:21])
+print(juft_sonlar[21:])
+# taomlar degan ro'yxat yarating va ichiga istalgan 5ta taomni kiriting
+# nonushta degan yangi ro'yxatga taomlardan nusxa oling
+# Yangi ro'yxatda faqat nonushtaga yeyiladigan taomlarni qoldiring, va qo'shimcha 2 ta taom qo'shing
+# Ikkala ro'yxatni ham (taomlar va nonushta) konsolga chiqaring
+# Yuqoridagi nonushta ro'yxatini o'zgarmas ro'yxatga aylantiring va nonushta[0] = "qaymoq va non" deb qiymat berib ko'ring.
