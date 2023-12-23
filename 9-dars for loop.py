@@ -61,4 +61,3 @@ suhbatdoshlar = []
 for suhbatdosh in range(nechta_odam):
     suhbatdoshlar.append(input(f"{suhbatdosh+1}-suhbatdoshingizni kiriting>>> "))
 print(suhbatdoshlar)
-
