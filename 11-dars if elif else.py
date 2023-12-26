@@ -100,14 +100,24 @@ Created on Mon Dec 25 18:30:42 2023
 
 # - Foydalanuvchidan juft son kiritishni so'rang. Agar foydalanuvchi juft son kiritsa "Rahmat!", 
 # agar toq son kiritsa "Bu son juft emas" degan xabarni chiqaring.
-son = int(input("Juft son kiriting:>>> "))
-
+# son = int(input("Juft son kiriting:>>> "))
+# if son%2 ==0:
+#     print("Rahmat")
+# else:
+#     print("Bu son juft emas")
 
 # - Foydalanuvchi yoshini so'rang, va muzeyga kirish uchun chipta narhini quyidagicha chiqaring:
 #     + Agar foydalanuvchi 4 yoshdan kichkina yoki 60 dan katta bo'lsa bepul
 #     + Agar foydalanuvchi 18 dan kichik bo'lsa 10000 so'm
 #     + Agar foydalanuvchi 18 dan katta bo'lsa 20000 so'm
-
+yosh = int(input("Yoshingiz nechada?>>> "))
+if yosh < 4 or yosh>60:
+    narx = 0
+if yosh >= 4 or yosh < 18:
+    narx = 10000
+if yosh >=18 or yosh <= 60:
+    narx = 20000
+print(f"Sizga muzeyga kirish uchun chipta narxi {narx} so'm")
 # - Foydalanuvchidan ikita son kiritishni so'rang, sonlarni solishtiring va ularning teng yoki katta/kichikligi haqida xabarni chiqaring
 
 # - `mahsulotlar` degan ro'yxat yarating va kamida 10 ta turli mahsulotni kiriting. Yangi, `savat` degan bo'sh ro'yxat yarating va foydalanuvchidan savatga kamida 5 ta mahsulot kiritishni so'rang. Savatdagi elementlarni, `mahsulotlar` ro'yxati bilan solishtiring va qaysi biri ro'yxatda bo'lsa `"Mahsulot do'konimizda bor"` aks holda, `"Mahsulot do'konimizda yo'q"` degan xabarlarni chiqaring.
