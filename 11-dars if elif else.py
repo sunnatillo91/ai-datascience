@@ -133,43 +133,89 @@ Created on Mon Dec 25 18:30:42 2023
 # degan bo'sh ro'yxat yarating va foydalanuvchidan savatga kamida 5 ta mahsulot kiritishni so'rang. 
 # Savatdagi elementlarni, `mahsulotlar` ro'yxati bilan solishtiring va qaysi biri ro'yxatda bo'lsa 
 # `"Mahsulot do'konimizda bor"` aks holda, `"Mahsulot do'konimizda yo'q"` degan xabarlarni chiqaring.
-mahsulotlar = ['osh', 'kabob', 'shashlik', 'tuxumbarak', 'somsa', 'sho\'rva', 'lag\'mon', 'salat', 'lavash', 'tabaka']
-savat = []    
-print("Kamida 5 ta maxsulot kiriting:")
+# mahsulotlar = ['osh', 'kabob', 'shashlik', 'tuxumbarak', 'somsa', 'sho\'rva', 'lag\'mon', 'salat', 'lavash', 'tabaka']
+# savat = []    
+# print("Kamida 5 ta maxsulot kiriting:")
 
-for maxsulot in range(5):
-    savat.append(input(f"{maxsulot+1} maxsulotni kiriting>> "))
+# for maxsulot in range(5):
+#     savat.append(input(f"{maxsulot+1} maxsulotni kiriting>> "))
     
-for maxsulot in savat:
-    if maxsulot in mahsulotlar:
-        print(f"{maxsulot} do'konimizda bor")
-    else:
-        print(f"{maxsulot} do'konimizda yo'q")
+# for maxsulot in savat:
+#     if maxsulot in mahsulotlar:
+#         print(f"{maxsulot} do'konimizda bor")
+#     else:
+#         print(f"{maxsulot} do'konimizda yo'q")
        
 # - Yuqoridagi dasturni quyidagicha o'zgartiring: foydalanuvchidan 5 ta mahsulot kiritishni so'rang. 
-# Foydalanuvchi so'ragan va do'konda bor mahsulotlarni yang, bor_mahsulotlar degan ro'yxatga, do'konda yo'q 
+# Foydalanuvchi so'ragan va do'konda bor mahsulotlarni yangi, bor_mahsulotlar degan ro'yxatga, do'konda yo'q 
 # mahsulotlarni esa mavjud_emas degan ro'yxatga qo'shing.  Agar mavjud_emas ro'yxati bo'sh bo'lsa, "Siz so'ragan 
 # barcha mahsulotlar do'konimizda bor" degan xabarni, aks holda esa "Quyidagi mahsulotlar do'konimizda yo'q: ....." degan xabarni chiqaring.
-mahsulotlar = ['osh', 'kabob', 'shashlik', 'tuxumbarak', 'somsa', 'sho\'rva', 'lag\'mon', 'salat', 'lavash', 'tabaka']
-savat = []
-print("Kamida 5 ta maxsulot kiriting:")
-bor_mahsulotlar = []
-mavjud_emas = []
+# mahsulotlar = ['osh', 'kabob', 'shashlik', 'tuxumbarak', 'somsa', 'sho\'rva', 'lag\'mon', 'salat', 'lavash', 'tabaka']
 
-for maxsulot in range(5):
-    savat.append(input(f"{maxsulot+1} maxsulotni kiriting>> "))
-    for maxsulot in savat:
-        if maxsulot in mahsulotlar:
-           bor_mahsulotlar.append({maxsulot})
-        else:
-            mavjud_emas.append({maxsulot})
-
-if len(mavjud_emas) == 0:
-    print("Siz so'ragan barcha mahsulotlar do'konimizda bor")
-if maxsulot not in mahsulotlar:
-    print(f"Quyidagi mahsulotlar do'konimizda yo'q: {mavjud_emas}")
+# bor_mahsulotlar = []
+# mavjud_emas = []
+# print("Kamida 5 ta maxsulot kiriting:")
+# savat = []
+# for n in range(5):
+#     savat.append(input(f"{n+1} maxsulotni kiriting>> "))
     
-# - `foydalanuvchilar` degan ro'yxat tuzing, va kamida 5 ta login qo'shing. Foydalanuvchidan yangi login tanlashni so'rang va foydalanuvchi kiritgan loginni `foydalanuvchilar` degan ro'yxatning tarkibi bilan solishtiring. Agar ro'yxatda bunday login mavjud bo'lsa, `"Login band, yangi login tanlang!"` aks holda `"Xush kelibsiz, foydalanuvchi!"` xabarini chiqaring.
+# for taom in savat:
+#     if taom in mahsulotlar:
+#         bor_mahsulotlar.append(taom)
+#     else:
+#         mavjud_emas.append(taom)
+    
+# if len(mavjud_emas) == 0:
+#     print("Siz so'ragan barcha mahsulotlar do'konimizda bor")
+# if taom not in mahsulotlar:
+#     print(f"Quyidagi mahsulotlar do'konimizda yo'q: {mavjud_emas}")
 
-# - Foydalanuvchidan biror butun son kiritishni so'rang. Foydalanuvchi kiritgan sonni 2 da 10 gacha bo'lgan sonlardan qay biriga qoldiqsiz bo'linishini konsolga chiqaring.
+# mahsulotlar = ['osh', 'kabob', 'shashlik', 'tuxumbarak', 'somsa', 'sho\'rva', 'lag\'mon', 'salat', 'lavash', 'tabaka']
+
+# bor_mahsulotlar = []
+# mavjud_emas = []
+
+# print("Kamida 5 ta maxsulot kiriting:")
+# savat = []
+
+# for n in range(5):
+#     savat.append(input(f"{n+1}-maxsulotni kiriting>>> "))
+
+# for taom in savat:
+#     if taom in mahsulotlar:
+#         bor_mahsulotlar.append(taom)
+#     else:
+#         mavjud_emas.append(taom)
         
+# if mavjud_emas:
+#     print(f"Quyidagi maxsulotlar do'konimizda yo'q: {mavjud_emas}")
+# else:
+#     print("Siz so'ragan barcha maxsulotlar do'konimizda bor")
+
+
+# - `foydalanuvchilar` degan ro'yxat tuzing, va kamida 5 ta login qo'shing. Foydalanuvchidan yangi login tanlashni 
+# so'rang va foydalanuvchi kiritgan loginni `foydalanuvchilar` degan ro'yxatning tarkibi bilan solishtiring. Agar 
+# ro'yxatda bunday login mavjud bo'lsa, `"Login band, yangi login tanlang!"` aks holda `"Xush kelibsiz, foydalanuvchi!
+# "` xabarini chiqaring.
+# foydalanuvchilar = ['login1', 'login2', 'login3', 'login4', 'login5']
+# yangi_login = input("Yangi login tanlang:>>> ")
+# if yangi_login.lower() in foydalanuvchilar:
+#     print("Login band, yangi login tanlang!")
+# else:
+#     print("Xush kelibsiz, foydalanuvchi!")
+    
+# - Foydalanuvchidan biror butun son kiritishni so'rang. Foydalanuvchi kiritgan sonni 2 da 10 gacha bo'lgan 
+# sonlardan qay biriga qoldiqsiz bo'linishini konsolga chiqaring.
+
+son = int(input("Biror butun son kiriting:>>> "))
+for n in range(2,11):
+    if son%n == 0:
+        print(f"{son} soni {n} ga qoldiqsiz bo'linadi")
+
+    
+
+        
+
+
+
+
