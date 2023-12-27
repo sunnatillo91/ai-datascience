@@ -133,18 +133,18 @@ Created on Mon Dec 25 18:30:42 2023
 # degan bo'sh ro'yxat yarating va foydalanuvchidan savatga kamida 5 ta mahsulot kiritishni so'rang. 
 # Savatdagi elementlarni, `mahsulotlar` ro'yxati bilan solishtiring va qaysi biri ro'yxatda bo'lsa 
 # `"Mahsulot do'konimizda bor"` aks holda, `"Mahsulot do'konimizda yo'q"` degan xabarlarni chiqaring.
-# mahsulotlar = ['osh', 'kabob', 'shashlik', 'tuxumbarak', 'somsa', 'sho\'rva', 'lag\'mon', 'salat', 'lavash', 'tabaka']
-# savat = []    
-# print("Kamida 5 ta maxsulot kiriting:")
+mahsulotlar = ['osh', 'kabob', 'shashlik', 'tuxumbarak', 'somsa', 'sho\'rva', 'lag\'mon', 'salat', 'lavash', 'tabaka']
+savat = []    
+print("Kamida 5 ta maxsulot kiriting:")
 
-# for maxsulot in range(5):
-#     savat.append(input(f"{maxsulot+1} maxsulotni kiriting>> "))
+for maxsulot in range(5):
+    savat.append(input(f"{maxsulot+1} maxsulotni kiriting>> "))
     
-# for maxsulot in savat:
-#     if maxsulot in mahsulotlar:
-#        print(f"{maxsulot} do'konimizda bor")
-#     else:
-#        print(f"{maxsulot} do'konimizda yo'q")
+for maxsulot in savat:
+    if maxsulot in mahsulotlar:
+        print(f"{maxsulot} do'konimizda bor")
+    else:
+        print(f"{maxsulot} do'konimizda yo'q")
        
 # - Yuqoridagi dasturni quyidagicha o'zgartiring: foydalanuvchidan 5 ta mahsulot kiritishni so'rang. 
 # Foydalanuvchi so'ragan va do'konda bor mahsulotlarni yang, bor_mahsulotlar degan ro'yxatga, do'konda yo'q 
@@ -158,11 +158,11 @@ mavjud_emas = []
 
 for maxsulot in range(5):
     savat.append(input(f"{maxsulot+1} maxsulotni kiriting>> "))
-for maxsulot in savat:
-    if maxsulot in mahsulotlar:
-       bor_mahsulotlar.append({maxsulot})
-    else:
-        mavjud_emas.append({maxsulot})
+    for maxsulot in savat:
+        if maxsulot in mahsulotlar:
+           bor_mahsulotlar.append({maxsulot})
+        else:
+            mavjud_emas.append({maxsulot})
 
 if len(mavjud_emas) == 0:
     print("Siz so'ragan barcha mahsulotlar do'konimizda bor")
