@@ -56,13 +56,22 @@ word = 'print'
 #         print(f"{word['info']}")
 
 # - Yuqoridagi vazifani `if-else` yordamida qiling va natijani ham foydalanuvchiga tushunarli ko'rinishda chiqaring.
-word = input("Biror so'z kiriting:>>> ")
-if word in dict_py:
-    print(dict_py[word])
-else:
-    print("Bunday so'z mavjud emas")
+# word = input("Biror so'z kiriting:>>> ")
+# if word in dict_py:
+#     print(dict_py[word])
+# else:
+#     print("Bunday so'z mavjud emas")
 
 
+x=int(input('1-son>>'))
+y=int(input('2-son>>'))
+z=int(input('3-son>>'))
+if x>y and x>z:
+    print(f"katta son {x}")
+elif y>x and y>z:
+    print(f"Katta son {y}")
+elif z>x and z>y:
+    print(f"Katta son {z}")
 
 
 
