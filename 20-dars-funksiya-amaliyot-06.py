@@ -15,17 +15,51 @@ def toliq_ism_info(ism, familiya, tyil, tjoy, manzil, email, tel=''):
     """Foydanaluvchidan ismi, familiyasi, tug'ilgan yili, tug'ilgan joyi, email manzili va telefon 
     raqamini qabul qilib, lug'at ko'rinishida qaytaruvchi funksiya"""
     if tel:
-        toliq_ism = f"{ism.title()} {familiya.title()} {tyil}-yilda {tjoy.title()}da tug'ilgan \
-            yoshi {2024-tyil} da. Email: {email}, manzili {manzil.title()}, telefon raqami {tel}"
+        toliq_ism = {
+            "ism":ism,
+            "familiya":familiya,
+            "tyil":tyil,
+            "tjoy":tjoy,
+            'email':email,
+            'manzil':manzil,
+            'tel':tel}
     else:
-        toliq_ism = f"{ism.title()} {familiya.title()} {tyil}-yilda {tjoy.title()}da tug'ilgan \
-            yoshi {2024-tyil} da. Email: {email}, manzili {manzil.title()}, telefon raqami noma'lum"
+        toliq_ism = {
+              "ism":ism,
+              "familiya":familiya,
+              "tyil":tyil,
+              "tjoy":tjoy,
+              'email':email,
+              'manzil':manzil}
     return toliq_ism
-talaba = toliq_ism_info('orif', 'shamsiyev', 1986, "nurota", 'navoiy', "orif@gmail.com", 939507999)
-print(talaba)
+# talaba = toliq_ism_info('orif', 'shamsiyev', 1986, "nurota", 'navoiy', "orif@gmail.com", 939507999)
+# print(talaba)
 # 2. Yuqoridagi funksiyani while yordamida bir necha bor chaqiring, va mijozlar degan ro'yxatni 
 # shakllantiring. Ro'yxatdagi mijozlar haqidagi ma'lumotni konsolga chiqaring.
-
+ishora = True
+mijozlar = []
+while ishora:
+    print("Quyidagi ma'lumotlarni kiriting: ", end='')
+    ism = input('ism: ')
+    familiya = input('familiya: ')
+    tyil = input('tyil:')
+    tjoy = input('tjoy: ')
+    manzil = input('manzil: ')
+    email = input('email: ')
+    tel = input('tel: ')
+    mijozlar.append(toliq_ism_info(ism, familiya, tyil, tjoy, manzil, email, tel))
+    takror = input("Yana ma'lumot qo'shasizmi? (ha/yo'q) ")
+    if takror == 'yo\'q':
+        ishora = False
+for mijoz in mijozlar:
+    if tel:
+        tel = mijoz['tel']
+    else:
+        tel = 'noma\'lum'
+        
+    print(f"{mijoz['ism'].title()} {mijoz['familiya'].title()} {mijoz['tyil']}da {mijoz['tjoy']} tumanida tug'ilgan, \
+    yoshi {2023-int(mijoz['tyil'])}da. Yashash manzili {mijoz['manzil']}.title(), elektron manzili {mijoz['email']}, telefon raqami \
+    {mijoz['tel']}")
 
 # 3. Uchta son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya yozing
 
