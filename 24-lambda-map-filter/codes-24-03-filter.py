@@ -25,5 +25,13 @@ import random as r
 
 mevalar = ['olma', 'anor', 'uzum', 'shaftoli', 'tarvuz', 'qovun', 'banan']
 harf = 'u'
-mevalar_harf = list(filter(lambda meva:meva.startswith(harf), mevalar))
-print(mevalar_harf)
+# mevalar_harf = list(filter(lambda meva:meva.startswith(harf), mevalar))
+# print(mevalar_harf)
+
+mevalar2 = list(filter(lambda meva:len(meva)<=5, mevalar))
+# print(mevalar2)  # harflari soni 5 tadan kam mevalarni chiqaradi
+
+mevalar3 = list(filter(lambda meva:(meva.startswith('a') or meva.endswith('m')), mevalar))
+
+print(mevalar3)
+
