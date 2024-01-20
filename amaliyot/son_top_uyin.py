@@ -8,76 +8,68 @@ Created on Wed Jan 17 21:06:59 2024
 """
 
 import random
-
-# a = range(11)
-# sonlar = []
-# def oraliq(min, max):
-#     while min<max:
-#         sonlar.append(min)
-#         min += 1
-#     return sonlar
-
-# 
-# if son
-# i = 0
-# sonlar = range(11)
-# for son in sonlar:
-#     while x == son:
-#         if son < x:
-#             print("Xato, men o'ylagan son bundan kattaroq. Yana harakat qiling")
-#             continue
-#         if son > x:
-#             print("Xato, men o'ylagan son bundan kichikroq. Yana harakat qiling")
-#             continue
-#         if son == x:
-#             print(f"To'g'ri topdingiz {son} ni o'ylagandim")
-#             break
-#         i += 1
-#     print(son)
     
-def son_top(x):
+def son_top(x=10):
     tasodifiy_son = random.randint(1,x)
     print(f"1 dan {x} gacha son o'yladim topa olasizmi?: ")
-    i = 0
+    takror_user = 0
     while True:
-        i += 1
+        takror_user += 1
         taxmin = int(input('>>> '))
         if taxmin < tasodifiy_son:
             print("Xato, men o'ylagan son bundan kattaroq. Yana harakat qiling")
-        if taxmin > tasodifiy_son:
+        elif taxmin > tasodifiy_son:
             print("Xato, men o'ylagan son bundan kichikroq. Yana harakat qiling")
         else:
             break
-    
+    # return i
     print(f"To'g'ri topdingiz {taxmin} ni o'ylagandim "    
-        f"Siz {i} ta urinishda topdingiz")
-    return i
+        f"Siz {takror_user} ta urinishda topdingiz")
+    return takror_user
 
-# print(son_top(10))
+# son_top(10)
 
-def son_top_pc(y):
-    tasodifiy_son = random.randint(1,y)
-    print(f"1 dan {y} gacha son o'ylang. Men topishga urinib ko'raman ")
-    i = 0
+def son_top_pc(y=10):
+    
+    input(f"1 dan {y} gacha son o'ylang. Men topishga urinib ko'raman. Istalgan sonni bosing ")
+    
+    quyi = 1
+    yuqori = y
+    takror_pc = 0
     while True:
-        i += 1
-        taxmin = input('>>> ')
-        if taxmin == '+':
-            print(f"{tasodifiy_son}ni o'yladingiz to'g'ri (t), men o'ylagan son bundan kattaroq(+), yoki kichikroq (-)")
-        if taxmin == '-':
-            print(f"{tasodifiy_son}ni o'yladingiz to'g'ri (t), men o'ylagan son bundan kattaroq(+), yoki kichikroq (-)")
+        takror_pc += 1
+        if quyi != yuqori:
+            tasodifiy_son = random.randint(quyi,yuqori)
+        else:
+            tasodifiy_son = quyi
+        javob = input(f"{tasodifiy_son} ni o'yladingiz to'g'ri (t), men o'ylagan son bundan \
+                      kattaroq(+), yoki kichikroq (-) ")
+        if javob == '+':
+            quyi = tasodifiy_son + 1
+        elif javob == '-':
+            yuqori == tasodifiy_son - 1
         else:
             break
     
-    print(f"To'g'ri topdim, {i} ta urinishda topdim")
-    return i
+    print(f"Ajoyib, {takror_pc} ta urinishda topdim")
+    return takror_pc
+# son_top_pc(10)
+# print()
 
-print(son_top_pc(10))
-
-
-
-
-
+def uyin(x=10,y=10):
+    takror = True
+    while takror:
+        takror_user = son_top(x)
+        takror_pc = son_top_pc(y)
+        
+        if takror_pc<takror_user:
+            print(f"{takror_pc} ta urinishda topdim va men yutdim")
+        elif takror_user<takror_pc:
+            print(f"{takror_user} ta urinishda topdingiz va siz yutdingiz")
+        takror = input("O'yinni davom ettirishni xohlaysizmi? (yes/no)")
+        if takror == 'no':
+            takror = False
+uyin()
 
 
 
