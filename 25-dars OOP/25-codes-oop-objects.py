@@ -46,7 +46,7 @@ class Fan():
         # for talaba in self.talabalar:
         #     talabalar.append(talaba.get_fullname())
         # return talabalar
-        # Yuqoridagi 4 qator kod o'rniga shu vazifani bajaradigan 1 qator kod yozamiz
+    # Yuqoridagi 4 qator kod o'rniga shu vazifani bajaradigan 1 qator kod yozamiz
         return [talaba.get_fullname() for talaba in self.talabalar]
     
 def see_methods(klass):
