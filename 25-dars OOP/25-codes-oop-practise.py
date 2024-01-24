@@ -32,3 +32,12 @@ class User:
     
 user = User("Alijon", "Valiyev", "alijon45", "alijon1994@gmail.com")
 print(user.get_info())
+
+
+
+
+
+
+
+
+

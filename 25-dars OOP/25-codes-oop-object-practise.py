@@ -38,22 +38,36 @@ class Avto:
 # (salon nomi, manzili, sotuvdagi avtomobillar va hokazo)
 
 class Avtosalon:
-    def __init__(self, nomi, manzili, avtomobillar, telefoni):
+    def __init__(self, nomi, manzili, telefoni):
         self.nomi = nomi
         self.manzili = manzili
         self.avtomobillar = []
         self.telefoni = telefoni
-        
+    
 # 5. Avtosalonga yangi avtomobillar qo'shish uchun metod yozing
 # Avtosalondagi avtomobillar haqida ma'lumot qaytaruvchi metod yozing
-    def avto_qush(self, avto):
-        self avtomobillar.append(avto)
+    def avto_add(self, avto):
+        self.avtomobillar.append(avto)
+        return self.avtomobillar
         
-        
+    def get_avto_info(self):
+        print(f"{self.nomi} avtosalonidagi avtomobillar: ")
+        return [avto.get_info() for avto in self.avtomobillar]
 # 6. Yuqoridagi obyektlar va ularga tegishli metodlarni tekshirib ko'ring
 
 # 7. dir() funksyasi va __dict__ metodi yordamida o'zingiz yozgan va Pythondagi turli 
 # klass va obyektlarning xususiyatlari va metodlarini toping (dir(str), dir(int) va hokazo)
 
 avto1 = Avto("Malibu", "Oq", "avtomat", 35000, 2023)
-print(avto1.get_info())
+avto2 = Avto("Lacetti", "Qora", "avtomat", 25000, 2023)
+# print(avto1.get_info())
+
+avtosalon = Avtosalon("Billur", "Navoiy", 998995556677)
+avtosalon.avto_add(avto1)
+avtosalon.avto_add(avto2)
+# avtosalon.get_avto_info()
+# print(avtosalon.get_avto_info())
+print(avtosalon.__dict__)
+
+
+
