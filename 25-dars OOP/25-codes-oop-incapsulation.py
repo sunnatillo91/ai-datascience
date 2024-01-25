@@ -14,3 +14,13 @@ avto2 = Avto("GM", "Lacetti", "Oq", 2023, 20000, 200)
 avto3 = Avto("GM", "Cobalt", "Qora", 2023, 15000, 150)
 print(avto1.get_km())
 print(avto1.get_num_avto())
+
+# AMALIYOT
+# Avvalgi darslarimizda yaratgan Shaxs va Talaba klasslariga yopiq xususiyatlar 
+# qo'shing va ularning qiymatini ko'rsatuvchi va o'zgartiruvchi metodlar yozing.
+
+
+# Yuqoridagi klasslarga talabalar_soni va odamlar_soni degan klassga oid xususiyatlar qo'shing.
+
+
+# Klassga oid xususiyatlar bilan ishlash uchun maxsus @classmethod lar yozing 
