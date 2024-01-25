@@ -67,7 +67,7 @@ talaba = Talaba("Valijon", "Hakimov", "AB456554", 2001, "AD123221")
 talaba.get_info()
 
         
-        
+         
         
         
         
