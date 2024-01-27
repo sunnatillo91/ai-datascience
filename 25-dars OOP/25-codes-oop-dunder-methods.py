@@ -44,13 +44,16 @@ class Avtosalon:
     def __repr__(self):  # repr metodi str kabi vazifa bajaradi, str dan ko'proq f-ya b-n ishlaydi
         return f"Avtosalon: {self.name}"
     
-    def __getitem__(self, index):
+    def __getitem__(self, index):  #qiymatni olish
         return self.avtolar[index]
+    
+    def __setitem__(self, index, qiymat):  # Biror indexdagi qiymatni o'zgartirish
+        self.avtolar[index] = qiymat 
     
     def add_avto(self, *qiymat):  # *qiymat orqali istalgancha qiymat berish mumkin
         for avto in qiymat:
-            if  isinstance(avto, Avto):  #isinstance obyekt clasga tegishli yoki yo'qligini aniqlaydi
-                return self.avtolar.append(avto)
+            if isinstance(avto, Avto):  #isinstance obyekt clasga tegishli yoki yo'qligini aniqlaydi
+                self.avtolar.append(avto)
             else:
                 print("Avto kiriting")
     
@@ -60,5 +63,8 @@ print(salon1)
 
 avto1 = Avto("Tesla", "TeslaX", "Dark Blue", 2024, 85000)
 avto2 = Avto("Lamborgini", "Huracan", "Dark Green", 2024, 302000)
-salon1.add_avto(avto1, avto2)
+avto3 = Avto("Lamborgini", "Revuelto", "Black", 2024, 345000)
+salon1.add_avto(avto1,avto2, avto3)
+
+salon1[0] = Avto("BMW", "X7", "Black", 2023, 85000)
 # print(avto1)
