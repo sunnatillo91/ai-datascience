@@ -64,27 +64,16 @@ class Talaba(Shaxs): # Shaxs-super klas, Talaba-voris klas
         info = f"{self.ism} {self.familiya} "
         info += f"{self.bosqich}-bosqich talabasi. ID: {self.idraqam}, manzili: {self.manzil.get_manzil()}"
         return info
+talaba = Talaba("Valijon", "Hakimov", "AB456554", 2001, "AD123221")
+talaba.get_info()
 
-# talaba.get_info()
-
-class Manzil:
-    """Manzil saqlash uchun klas"""
-    def __init__(self, uy, kocha, tuman, viloyat):
-        """Manzil xususiyatlari"""
-        self.uy = uy
-        self.kocha = kocha
-        self.tuman = tuman
-        self.viloyat = viloyat
         
-    def get_manzil(self):
-        manzil = f"{self.viloyat} viloyati {self.tuman} tumani {self.kocha} ko'chasi, {self.uy} uy"
-        return manzil
+         
         
-talaba1_addres = Manzil(15, "Xisrav", 'Karmana', 'Navoiy')
-talaba1 = Talaba("Valijon", "Hakimov", "AB456554", 2001, "AD123221", talaba1_addres)     
         
-print(talaba1.manzil.get_manzil())
-print(talaba1.get_info())
+        
+        
+        
         
         
         
