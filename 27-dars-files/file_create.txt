@@ -1,0 +1,38 @@
+file = open('file_name.txt') - ushbu holatda ochish tavsiya qilinmaydi
+file_name = file.read()
+print(file_name)
+file.colse()    - ushbu holatda fayl yopilmasa faylga zarar yetishi mumkin
+
+with open('file_name.txt') as file:  - ushbu holatda ochish tavsiya qilinadi
+	file_name = file.read()	     - with yordamida o'qilganda text shaklda ma'lumot qaytadi
+print(file_name)
+
+Fayl yozish
+faylnomi = 'new_file.txt'
+ism = 'Qudratillo Omonboyev'
+tyil = 1988
+with open(faylnomi, 'w') as fayl:
+	fayl.write(ism+'\n')
+fayl.write(str(tyil)+'\n')
+
+Mavjud faylga qo'shimcha yozish
+
+with open(faylnomi, 'a') as fayl:
+	fayl.write('Valijon Aliyev\n')
+	fayl.write('2001')
+
+O'ZGARUVCHILARNI SAQLASH
+import pickle
+
+talaba1 = {'ism':'hasan', 'familiya':'husanov', 'tyil':2005, 'kurs':2}
+
+with open('info.pkl', 'wb') as fayl:
+	pickle.dump(talaba1, fayl)
+
+O'ZGARUVCHILARNI O'QISH
+import pickle
+
+with open('info.pkl', 'rb') as file:
+	talaba1 = pickle.load(file)
+print(talaba1)
+

@@ -22,8 +22,8 @@ Created on Sat Jan 27 18:39:31 2024
 # pi = float(pi)
 # print(pi)
 
-filename = 'data/talabalar.txt'
-with open(filename) as file:
+file_name = 'data/talabalar.txt'
+with open(file_name) as file:
     talabalar = file.readlines()
 print(talabalar)
 talabalar = [talaba.rstrip() for talaba in talabalar]
