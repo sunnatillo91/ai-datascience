@@ -34,13 +34,22 @@ import pickle
 
 # 4. Fayl ichidagi matnni float ma'lumot turiga o'tkazing va pickle yordamida yangi 
 # faylga saqlang.
-with open('pi_million_digits.txt') as file:
-    pi = file.read()
-    pi_numbers = float(file)
+# with open('pi_million_digits.txt') as file:
+#     pi = file.read()
+#     pi_numbers = float(file)
     
-with open('pi_numbers.pkl', 'wb') as file:
-    pickle.dump(pi_numbers, file)
+# with open('pi_numbers.pkl', 'wb') as file:
+#     pickle.dump(pi_numbers, file)
     
 # 5. Foydalanuvchidan turli hil ma'lumotlarni so'rab, har bir kiritilgan ma'lumotni 
 # yangi qatordan faylga yozib boruvchi dastur tuzing. Dastur qayta chaqirilganida 
 # yangi ma'lumotlar fayl oxiridan qo'shilib borsin (yangi faylga emas).
+def info_dastur():   
+    """Foydalanuvchidan turli hil ma'lumotlarni so'rab, har bir kiritilgan ma'lumotni 
+     yangi qatordan faylga yozib boruvchi dastur """
+    malumot = input("Istalgan ma'lumot kiriting:>> ")
+    with open('info.txt', 'a') as file:
+       file.write(malumot+'\n')
+       return malumot
+       
+print(info_dastur())
