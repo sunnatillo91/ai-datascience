@@ -13,7 +13,8 @@ import json
 # Ularning har birini alohida qatordan "Ism Familiya, n-kurs, Fakultet talabasi" 
 # ko'rinishida konsolga chiqaring.
 
-file_path = r'd:\programming\ai-datacsience\28-dars-json\students.json'
+# file_path = r'd:\programming\ai-datacsience\28-dars-json\students.json'
+file_path = 'students.json'
 
 try:
     with open(file_path, 'r') as file:
@@ -24,12 +25,9 @@ except FileNotFoundError:
 except Exception as e:
     print(f"An error occurred: {e}")
 
-a = data['student'][0]
-# print(data.items())
+a = data['student'][:]
 
-# for key, value in data.items():
-#     print(f"Keys: {key}")
-#     print(f"Values: {value} \n")
-    
 for talaba in a:
-    print(f"{a['name']} {a['lastname']}, {a['year']}-kurs, {a['faculty']} talabasi")
+    info = f"{talaba['name']} {talaba['lastname']}, {talaba['year']}-kurs,"
+    info += f"{talaba['faculty']} talabasi"
+    print(info)
