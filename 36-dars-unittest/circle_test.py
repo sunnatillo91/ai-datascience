@@ -11,7 +11,7 @@ import unittest
 
 class CircleTest(unittest.TestCase):
     def test_area(self):
-        self.assertAlmostEqual(getArea(5),78.53975)
+        self.assertEqual(getArea(5),78.53975)
         self.assertAlmostEqual(getArea(12), 452.38896)
         
     def test_perimeter(self):

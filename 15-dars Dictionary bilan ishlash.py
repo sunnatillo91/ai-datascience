@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 """
 15-DARS LUG'ATlar bilan ishlash 
 
