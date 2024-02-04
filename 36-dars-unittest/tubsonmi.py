@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-36-dars Unittest
+36-dars FUNKSIYALARNI TEKSHIRISHUnittest
 
 Created on Thu Feb  1 21:49:11 2024
 

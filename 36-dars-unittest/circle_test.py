@@ -18,5 +18,6 @@ class CircleTest(unittest.TestCase):
         self.assertAlmostEqual(getPerimeter(10), 62.8318)
         self.assertAlmostEqual(getPerimeter(4), 25.13272)
 
+# if __name__ == '__main__':
+# unittest.main()
 unittest.main()
-
