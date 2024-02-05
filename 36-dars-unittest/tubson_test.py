@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+#36-DARS. FUNKSIYALARNI TEKSHIRISH
 
 Created on Thu Feb  1 22:00:56 2024
 

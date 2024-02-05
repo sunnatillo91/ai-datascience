@@ -12,6 +12,6 @@ from practise import fibonacci
 class FibonacciTest(unittest.TestCase):
     def test_fibonacci(self):
         self.assertTrue(fibonacci(13))
-        # self.assertIn(fibonacci(6), 8)
+        self.assertTrue(fibonacci(6))
         
 unittest.main()
