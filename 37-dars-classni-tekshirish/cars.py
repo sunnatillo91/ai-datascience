@@ -8,7 +8,7 @@ Created on Mon Feb  5 12:09:34 2024
 """
 
 class Avto:
-    def __init__(self, model, rang, korobka, yil, narh=None, kilometr = 3):
+    def __init__(self, model, rang, korobka, yil, narh=None, kilometr = 0):
         self.model = model
         self.rang = rang
         self.korobka = korobka
@@ -35,3 +35,7 @@ class Avto:
     
     def get_km(self):
         return self.__kilometr
+    
+avto1 = Avto("Malibu", "Qora", "Avtomat", 2023, 35000)    
+    
+print(avto1.get_info())
