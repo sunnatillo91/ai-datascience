@@ -40,7 +40,7 @@ x = 81
 print(math.sqrt(x))
 
 # Darajaga oshirish
-x = 3
+x = 27
 print(math.pow(x, 3))  # x ning kubi
 print(math.pow(x, 5))  # x ning 5- darajasi
 print(math.pow(x, 1/3))  # x ning kub ildizi

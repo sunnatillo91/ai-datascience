@@ -40,3 +40,13 @@ bugun = dt.date.today()
 ramazon = dt.date(2024, 3, 10)
 farq = ramazon-bugun
 print(f"Ramazonga nasib etsa {farq.days} kun qoldi")
+
+# Soatlar orasidagi farq
+hozir = dt.datetime.now()
+futbol = dt.datetime(2024, 2, 7, 23, 50, 00)
+farq = futbol-hozir
+sekundlar = farq.seconds
+minutlar = int(sekundlar/60)
+soatlar = int(minutlar/60)
+print(f"Futbol boshlanishiga {farq.days} kun {soatlar} soat qoldi")
+# print(farq)
